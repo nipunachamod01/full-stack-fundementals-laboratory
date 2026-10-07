@@ -1,0 +1,50 @@
+CSC 1051: Full-Stack Fundamentals Laboratory
+LAB Practical 2
+Studio Journal Website | Simple HTML and CSS
+
+## Your task
+Recreate the supplied design as TWO pages: index.html (Home) and projects.html (Projects). Use only HTML and a separate styles.css file shared by both pages. Add a top navigation bar with Home and Projects on BOTH pages. Do not add a hamburger menu, JavaScript or a framework.
+
+## 1. Set up your files
+Create a folder named Lab Practical 2. Inside it, create index.html, projects.html and styles.css. Copy the supplied images folder into it. Keep the image filenames unchanged.
+
+## 2. Build the Home page
+Add the site name and navigation at the top. Below them, add the wide banner (pic10.png), a main heading, a short introduction and a Learn More link. Add four short feature items below the introduction. Simple text symbols are enough for the icons.
+
+## 3. Build the Projects page
+Use the six-card layout shown in Projects-Reference.png. Add a Projects heading and six cards in two columns. Each card needs an image, a heading, a short paragraph and a More link. Use pic01.png to pic06.png in order, left to right and top to bottom. A More link may open its card's image.
+
+## 4. Add simple CSS
+Use a white background, dark headings, grey paragraph text and a coral accent (#f56a6a). Add spacing, a coral line below the header and simple outlined links. Keep all CSS in styles.css. Aim for a similar layout; exact fonts, icons and wording are not required.
+
+## Help: connect the pages and stylesheet
+Put this line inside <head> on BOTH pages:
+CODE <link rel="stylesheet" href="styles.css">
+Use these links inside a <nav> element on BOTH pages:
+CODE <a href="index.html">Home</a>
+CODE <a href="projects.html">Projects</a>
+
+## Help: images and cards
+Example image path (the images folder is beside your HTML files):
+CODE <img src="images/pic01.png" alt="Sunlit path through a green forest">
+Wrap each card in <article> and all six cards in <div class="projects">.
+In styles.css, this creates two equal columns with space between them:
+CODE .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+CODE img { width: 100%; display: block; }
+The dot in .projects selects class="projects". 1fr 1fr makes two equal columns.
+
+## Useful HTML and CSS
+HTML: <header>, <nav>, <main>, <section>, <article>, <div>, <h1>, <h2>, <h3>, <p>, <a>, <img>.
+CSS: color, background-color, font-family, font-size, margin, padding, border and width. Margin adds space outside an element; padding adds space inside it.
+For Learn More, use href="#features" and give the feature section id="features".
+
+## Before you finish
+Open index.html in a browser. Click Home and Projects from both pages. Check all seven images load, Projects shows six cards, and both pages use styles.css. Save your files and refresh after changes. If styling or images are missing, check spelling, file extensions and folder paths first.
+
+## Repository and submission
+Use your Full-Stack-Fundamentals-Laboratory repository. Add a folder named Lab Practical 2 containing index.html, projects.html, styles.css and the images folder. Commit and push your work, then check all files are visible on GitHub. Keep the earlier practical in its own folder.
+
+## Independent practical
+Write and understand your own HTML and CSS. Use the examples as hints and be ready to explain your tags, classes and styles.
+
+Materials: Home-Reference.png and Projects-Reference.png, seven PNG images and Beginner-Help.txt.

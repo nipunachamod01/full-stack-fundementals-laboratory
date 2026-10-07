@@ -1,0 +1,93 @@
+STUDIO JOURNAL WEBSITE - BEGINNER HELP
+
+START HERE
+1. Create Lab Practical 2 and copy the images folder into it.
+2. Create index.html, projects.html and styles.css with a text editor.
+3. Build Home first, then reuse its header and navigation on Projects.
+4. Link styles.css inside the head of BOTH pages.
+5. Open index.html in your browser. Save and refresh after every change.
+
+BASIC PAGE SHELL - reuse for each page; change the title
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Add your header, navigation and page content here. -->
+</body>
+</html>
+
+FOLDER STRUCTURE
+Lab Practical 2/
+    index.html
+    projects.html
+    styles.css
+    images/
+        pic10.png   - Home banner
+        pic01.png   - Sunlit path through a green forest
+        pic02.png   - Sandy coastline beside turquoise water
+        pic03.png   - Trail through green mountain hills
+        pic04.png   - Lake reflecting distant mountains
+        pic05.png   - Sunset over rolling countryside
+        pic06.png   - Waterfall surrounded by green plants
+
+NAVIGATION - put on both pages
+<nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+</nav>
+
+ONE CARD EXAMPLE - repeat the pattern with different images and headings
+<article>
+    <img src="images/pic01.png" alt="Sunlit path through a green forest">
+    <h3>Forest Walk</h3>
+    <p>A short description of this project.</p>
+    <a href="images/pic01.png">More</a>
+</article>
+
+Place all six articles inside <div class="projects"> ... </div>.
+The More link in this exercise simply opens the image.
+
+SMALL CSS HINTS - these belong in styles.css
+body { margin: 40px; font-family: Arial, sans-serif; color: #7f888f; }
+h1, h2, h3 { color: #3d4449; }
+header { border-bottom: 3px solid #f56a6a; padding-bottom: 20px; }
+nav a { margin-right: 20px; }
+img { width: 100%; display: block; }
+.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+WHAT THE CSS MEANS
+.projects selects any element with class="projects".
+display: grid lays out its direct children (your six articles).
+1fr 1fr creates two equally sized columns.
+gap gives space between rows and columns.
+margin creates space outside; padding creates space inside.
+A selector like h1 styles all h1 headings.
+
+OPTIONAL SMALL-SCREEN HELP
+@media (max-width: 650px) {
+    .projects { grid-template-columns: 1fr; }
+}
+This stacks the cards in one column on narrow screens.
+
+REFERENCE GUIDE
+The supplied layout guides show TWO pages:
+- Home: header, banner, introduction and four feature items.
+- Projects: the six landscape image cards.
+- Keep Home / Projects navigation visible on both pages.
+Use short text of your choice. Exact icons and exact typography are not required.
+
+TROUBLESHOOTING
+No CSS? Check the link is inside head and the filename is styles.css.
+Missing image? Use images/pic01.png, not a path from your own Desktop.
+Page will not open? Check it is saved as .html, not .html.txt.
+Navigation fails? Keep both HTML files in the same folder.
+Cards do not form columns? Put class="projects" on the parent div.
+Changes missing? Save the file, then refresh the browser.
+
+IMAGE NOTE
+The supplied landscape images were generated for this exercise.
